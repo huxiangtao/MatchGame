@@ -11,8 +11,9 @@
 
     function Card() {
         this.isFaceUp = false;
-        this.isUnplayalbe = fales;
+        this.isUnplayalbe = false;
     }
+
 
     Card.prototype = {
         contents: function(v) {
