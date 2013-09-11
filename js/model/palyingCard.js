@@ -29,7 +29,7 @@
             if(v === undefined) {
                 return this._suit ? this._suit : "?";
             } else {
-                if (PlayingCard.validSuits[v]) {
+                if (PlayingCard.validSuits()[v]) {
                     this._suit = v;
                 }
             }
