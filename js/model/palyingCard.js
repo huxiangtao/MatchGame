@@ -17,9 +17,9 @@
         this.constructor = PlayingCard;
     }
 
-    PlayingCard.prototype = Object.create(card.Card.prototype);
+    PlayingCard.prototype = Object.create(card.Card.prototype); //通过原型构造来实现继承
 
-    var playingCardMethods = {
+    var playingCardMethods = {   //子类的方法
 
         contents: function() {
             return _rankStrings[this.rank()] + this.suit();

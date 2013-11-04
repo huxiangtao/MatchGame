@@ -9,6 +9,8 @@
 (function() {
     'use strict';
 
+    alert(test);
+
     var app = {
 
         init: function() {
