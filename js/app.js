@@ -6,18 +6,29 @@
  * To change this template use File | Settings | File Templates.
  */
 
-(function() {
+(function(view,playingCardDeck) {
     'use strict';
 
 
     var app = {
 
         init: function() {
+            view.init({
+                cardData: function() {
+                    var card = app.deck().drawRandomCard();
+                    return {
+                        contents: card.contents()
+                    };
+                }
+            });
+        },
 
+        deck: function() {
+            return this._deck || (this._deck = playingCardDeck());
         }
 
     };
 
     window.app = app;
 
-})();
+})(window.view,window.playingCardDeck);
