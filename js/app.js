@@ -9,7 +9,7 @@
 (function() {
     'use strict';
 
-    alert("test");
+    alert("third");
 
     var app = {
 
