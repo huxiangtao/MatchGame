@@ -36,6 +36,7 @@
                 randomCard = cards[index];
                 cards.splice(index,1);
             }
+            return randomCard;
         }
     };
 
