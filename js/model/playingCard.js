@@ -40,7 +40,7 @@
             if(v === undefined) {
                 return this._rank;
             } else {
-                if(v <= PalyingCard.maxRank()) {
+                if(v <= PlayingCard.maxRank()) {
                     this._rank = v;
                 }
                 return this._rank;
@@ -66,7 +66,7 @@
 
     PlayingCard.validSuits = function() {
         if(!_validSuits) {
-            _validSuits = {"♡" : 1,"♢" : 1,"♠" : 1,"♧" : 1};
+            _validSuits = {"♥" : 1,"♦" : 1,"♠" : 1,"♣" : 1};
         }
         return _validSuits;
     }

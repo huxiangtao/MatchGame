@@ -31,6 +31,7 @@
             } else {
                 compare.call(this,otherCards);
             }
+
             function compare(card) {
                 if(card.contents() === this.contents()) {
                     score = 1;
