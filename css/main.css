@@ -22,3 +22,15 @@ body {
     box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
     cursor: pointer;
 }
+
+.deck .card .front {
+    display: none;
+}
+
+.deck .card.selected {
+    background: #fff;
+}
+
+.deck .card.selected .front {
+    display: inline;
+}
