@@ -9,18 +9,33 @@
 (function(view,playingCardDeck) {
     'use strict';
 
+    var _flipCount = 0;
+
+    view.action.on('card:filp' , function(index) {
+        _flipCount++;
+        view.updateFlipsLabel({
+            count:_flipCount
+        });
+
+        view.updateCardButtons(function(i) {
+            if(i === index) {
+                var card = app.deck().drawRandomCard();
+                return {
+                    contents: card.contents(),
+                    isFaceUp: card.isFaceUp
+                };
+            } else {
+                return {};
+            }
+        });
+
+    });
+
 
     var app = {
 
         init: function() {
-            view.init({
-                cardData: function() {
-                    var card = app.deck().drawRandomCard();
-                    return {
-                        contents: card.contents()
-                    };
-                }
-            });
+            view.init({});
         },
 
         deck: function() {
