@@ -100,7 +100,7 @@
                     }
                 }
             }
-        }
+        };
     }
 
     window.view = view;
