@@ -2,7 +2,7 @@
  * Created with IntelliJ IDEA.
  * User: huxiangtao
  * Date: 13-11-11
- * Time: ÏÂÎç5:46
+ * Time: ä¸‹åˆ5:46
  * To change this template use File | Settings | File Templates.
  */
 
@@ -34,7 +34,7 @@
 
     var view = {
 
-        action: pubsub(),//Éè¼ÆÏûÏ¢½Ó¿Ú
+        action: pubsub(),//è®¾è®¡æ¶ˆæ¯æ¥å£
 
         init: function(opt) {
             this.flipsLabel = doc.querySelector('.count');
@@ -84,7 +84,7 @@
     function pubsub() {
         var lib = {};
         return {
-            //¹ã²¥Ë²Ê±ÏûÏ¢
+            //å¹¿æ’­ç¬æ—¶æ¶ˆæ¯
             fire: function(subject, args) {
                 if(lib[subject]) {
                     lib[subject].forEach(function(handler) {
@@ -92,7 +92,7 @@
                     });
                 }
             },
-            //¼àÌı¡¢¶©ÔÄ¡¢¹Û²ìÏûÏ¢
+            //ç›‘å¬ã€è®¢é˜…ã€è§‚å¯Ÿæ¶ˆæ¯
             on: function(subject, handler) {
                 var observer = lib[subject];
                 if(!observer) {
@@ -100,7 +100,7 @@
                 }
                 observer.push(handler);
             },
-            //È¡Ïû¶©ÔÄ
+            //å–æ¶ˆè®¢é˜…
             off: function(subject, handler) {
                 var observer = lib[subject];
                 if(observer) {

@@ -20,9 +20,12 @@
         view.updateCardButtons(function(i) {
             if(i === index) {
                 var card = app.deck().drawRandomCard();
+                card.isFaceUp = true;
+                card.isUnplayalbe = true;
                 return {
                     contents: card.contents(),
-                    isFaceUp: card.isFaceUp
+                    isFaceUp: card.isFaceUp,
+                    isUnplayalbe: card.isUnplayalbe
                 };
             } else {
                 return {};
